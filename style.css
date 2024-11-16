@@ -1,9 +1,13 @@
 body {
+  /*setting background color of website*/
   background-color: antiquewhite;
 }
 h1 {
+  /*Aligning header to the center of the website*/
   text-align: center;
+  /*Making the header italicized*/
   font-style: italic;
+  /*Changing how large the text is (Changed it a bit lower)*/
   font-weight: 200;
 }
 section {
@@ -13,4 +17,21 @@ section {
 ul {
   text-align: left;
   list-style-position: inside;
+}
+#create:hover {
+  color: green;
+}
+#clear:hover {
+  color: red;
+}
+#itemInput {
+  width: 80%;
+  border-width: 1.5px;
+}
+#itemList {
+  width: 80%;
+  margin: 0 auto;
+}
+#buttons {
+  padding-top: 2px;
 }

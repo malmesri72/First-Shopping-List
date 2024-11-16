@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Linking CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <!--Website Title-->
     <title>My Shopping List</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!--This will separate the h1 text to a header-->
     <header>
+      <!--Title-->
       <h1>My Shopping List</h1>
     </header>
+    <!--Seperates the rest of the page-->
     <section>
-     <label for="itemInput">Enter items:</label> <br>
-     <br>
-     <input type="text" id="itemInput" placeholder="e.g., Apples, Paper Towels">
-      <button onclick="createList()">Create List</button>
-      <ul id="itemList"></ul>
-      </br>
+      <!--Label set as "Enter Items" and set for "itemInput" to link to the input tag-->
+      <label for="itemInput">Enter items:</label>
+      <!--Making spaces-->
+      <br />
+      <br />
+      <!--Make a text box with the id "itemInput" and default text saying: "Apples, Paper Towels"-->
+      <input
+        type="text"
+        id="itemInput"
+        placeholder="Please enter more than one item seperated with a comma"
+      />
+      <!--Making a button that whenever its cliked, actives the function "createList()" in JS and the words on it are: "Create List"-->
+      <div id="buttons">
+        <button onclick="createList()" id="create">Create List</button>
+        <button onclick="deleteItems()" id="clear">Clear List</button>
+      </div>
+      <br />
+      <!--Making a bulleted list with the id "itemList"-->
+      <div id="list">
+        <ul id="itemList"></ul>
+        <!--Making a space-->
+      </div>
     </section>
+    <!--Linking JavaScript-->
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
-
