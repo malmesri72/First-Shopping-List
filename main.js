@@ -17,10 +17,12 @@ function createList() {
     if (item !== "") {
       // Create a new <li> element for each item
       const listItem = document.createElement("li");
+      const newBreak = document.createElement("br");
       // Set the text of the <li> to the text in "item", which holds the text for each item that the loop is focused on.
       listItem.textContent = item;
       // put <li> in <ul>
       list.appendChild(listItem);
+      list.appendChild(newBreak);
     }
   }
 }

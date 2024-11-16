@@ -14,6 +14,9 @@ section {
   text-align: center;
   font-weight: 200;
 }
+header {
+  border: 2px solid black;
+}
 ul {
   text-align: left;
   list-style-position: inside;
@@ -34,4 +37,13 @@ ul {
 }
 #buttons {
   padding-top: 2px;
+  border-radius: 50%;
+}
+.border {
+  border: 1px solid black;
+  width: 80%;
+  border-width: 1.5px;
+}
+li {
+  font-size: large;
 }
