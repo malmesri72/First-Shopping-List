@@ -1,3 +1,6 @@
+window.onload = function () {
+  loadData();
+};
 //Creating a function named "createList()"
 function createList() {
   // Getting the text in <input> by putting its id
@@ -17,12 +20,10 @@ function createList() {
     if (item !== "") {
       // Create a new <li> element for each item
       const listItem = document.createElement("li");
-      const newBreak = document.createElement("br");
       // Set the text of the <li> to the text in "item", which holds the text for each item that the loop is focused on.
       listItem.textContent = item;
       // put <li> in <ul>
       list.appendChild(listItem);
-      list.appendChild(newBreak);
     }
   }
 }
@@ -41,4 +42,48 @@ function deleteItems() {
 
   // Clearing input text box
   document.getElementById("itemInput").value = "";
+}
+const ul = document.getElementById("itemList");
+ul.addEventListener("click", function (event) {
+  if (event.target.tagName === "LI") {
+    editItem(event.target);
+  }
+});
+function editItem(item) {
+  const currentItem = item;
+  const currentText = item.textContent;
+  const textBox = document.createElement("input");
+  textBox.type = "text";
+  textBox.placeholder = "Edit item: ";
+  currentItem.replaceWith(textBox);
+  textBox.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      saveItem(textBox);
+    }
+  });
+}
+function saveItem(item) {
+  {
+    const li = document.createElement("li");
+    li.textContent = item.value;
+    item.replaceWith(li);
+  }
+}
+function saveData() {
+  const savedList = [];
+  const ul = document.getElementById("itemList");
+  ul.querySelectorAll("li").forEach((li) => savedList.push(li.textContent));
+  localStorage.setItem("shoppingList", JSON.stringify(savedList));
+}
+
+function loadData() {
+  const data = JSON.parse(localStorage.getItem("shoppingList")) || [];
+  data.forEach(addData);
+}
+
+function addData(data) {
+  const newItem = document.createElement("li");
+  newItem.textContent = data;
+  const ul = document.getElementById("itemList");
+  ul.appendChild(newItem);
 }

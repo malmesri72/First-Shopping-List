@@ -27,6 +27,9 @@ ul {
 #clear:hover {
   color: red;
 }
+#save:hover {
+  color: blue;
+}
 #itemInput {
   width: 80%;
   border-width: 1.5px;
@@ -37,7 +40,6 @@ ul {
 }
 #buttons {
   padding-top: 2px;
-  border-radius: 50%;
 }
 .border {
   border: 1px solid black;
@@ -46,4 +48,9 @@ ul {
 }
 li {
   font-size: large;
+  margin-bottom: 8px;
+}
+li:hover {
+  cursor: pointer;
+  color: purple;
 }
