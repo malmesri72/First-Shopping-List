@@ -31,6 +31,8 @@ ul {
   width: 90%;
   padding-bottom: 2.5px;
   position: fixed;
+  background-color: black;
+  color: white;
 }
 
 #create:hover {
@@ -46,8 +48,8 @@ ul {
 }
 
 #switch:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .darkmode {

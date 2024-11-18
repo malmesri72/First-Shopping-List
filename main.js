@@ -1,8 +1,12 @@
 window.onload = function () {
   loadData();
+  const button = document.getElementById("switch");
   if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("darkmode");
     header.classList.add("darkmode-header");
+    button.textContent = "Light Mode";
+  } else {
+    button.textContent = "Dark Mode";
   }
 };
 
@@ -114,10 +118,13 @@ function addData(data) {
 function darkMode() {
   document.body.classList.toggle("darkmode");
   header.classList.toggle("darkmode-header");
+  const button = document.getElementById("switch");
   if (document.body.classList.contains("darkmode")) {
     localStorage.setItem("darkMode", "enabled");
+    button.textContent = "Light Mode";
   } else {
     localStorage.setItem("darkMode", "disabled");
+    button.textContent = "Dark Mode";
   }
 }
 const header = document.querySelector("header");
