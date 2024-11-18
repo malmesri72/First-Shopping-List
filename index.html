@@ -3,45 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Linking CSS-->
     <link rel="stylesheet" href="style.css" />
-    <!--Website Title-->
     <title>My Shopping List</title>
   </head>
   <body>
-    <!--This will separate the h1 text to a header-->
+    <button onclick="darkMode()" id="switch">Dark Mode</button>
+    <br />
+    <br />
     <header>
-      <!--Title-->
       <h1>My Shopping List</h1>
       <div id="list">
-        <ul id="itemList"></ul>
-        <!--Making a space-->
+        <div id="itemList"></div>
       </div>
-      <br />
-      <br />
-      <br />
     </header>
-    <!--Seperates the rest of the page-->
     <section>
-      <!--Making spaces-->
-      <br />
-      <br />
-      <!--Make a text box with the id "itemInput" and default text saying: "Apples, Paper Towels"-->
-      <input
-        type="text"
-        id="itemInput"
-        placeholder="Please enter more than one item seperated with a comma"
-      />
-      <!--Making a button that whenever its cliked, actives the function "createList()" in JS and the words on it are: "Create List"-->
+      <input type="text" id="itemInput" placeholder="Enter an item:" />
       <div id="buttons">
-        <button onclick="createList()" id="create">Create List</button>
+        <button onclick="createItem()" id="create">Add Item</button>
         <button onclick="deleteItems()" id="clear">Clear List</button>
         <button onclick="saveData()" id="save">Save List</button>
       </div>
-      <br />
-      <!--Making a bulleted list with the id "itemList"-->
     </section>
-    <!--Linking JavaScript-->
     <script src="main.js"></script>
   </body>
 </html>

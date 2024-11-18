@@ -1,56 +1,107 @@
 body {
-  /*setting background color of website*/
+  /* setting background color of website */
   background-color: antiquewhite;
 }
+
 h1 {
-  /*Aligning header to the center of the website*/
+  /* Aligning header to the center of the website */
   text-align: center;
-  /*Making the header italicized*/
+  /* Making the header italicized */
   font-style: italic;
-  /*Changing how large the text is (Changed it a bit lower)*/
+  /* Changing how large the text is (Changed it a bit lower) */
   font-weight: 200;
 }
+
 section {
   text-align: center;
   font-weight: 200;
 }
+
 header {
   border: 2px solid black;
 }
+
 ul {
   text-align: left;
   list-style-position: inside;
 }
+
+#switch {
+  margin-bottom: 2.5px;
+  width: 90%;
+  padding-bottom: 2.5px;
+  position: fixed;
+}
+
 #create:hover {
   color: green;
 }
+
 #clear:hover {
   color: red;
 }
+
 #save:hover {
   color: blue;
 }
+
+#switch:hover {
+  background-color: black;
+  color: white;
+}
+
+.darkmode {
+  background-color: black;
+  color: antiquewhite;
+}
+
+header.darkmode-header {
+  border: 2px solid antiquewhite;
+}
+
 #itemInput {
   width: 80%;
   border-width: 1.5px;
+  margin-top: 10px;
 }
+
 #itemList {
   width: 80%;
   margin: 0 auto;
 }
+
 #buttons {
-  padding-top: 2px;
+  /* Center buttons */
+  text-align: center;
+  margin-top: 5px;
 }
-.border {
-  border: 1px solid black;
-  width: 80%;
-  border-width: 1.5px;
+
+button {
+  margin: 0 10px; /* Add spacing between buttons */
 }
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  margin-bottom: 7.5px;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: gray;
+}
+
+label {
+  font-size: large;
+  margin-bottom: 8px;
+  cursor: pointer;
+  padding: 4px;
+}
+
 li {
   font-size: large;
   margin-bottom: 8px;
 }
-li:hover {
+
+input[type="checkbox"]:hover {
   cursor: pointer;
-  color: purple;
 }
