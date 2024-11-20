@@ -10,64 +10,105 @@ h1 {
   font-style: italic;
   /* Changing how large the text is (Changed it a bit lower) */
   font-weight: 200;
+  margin-bottom: 30px;
 }
 
 section {
+  /*Centering content inside the section tag. (Lower part of page with text bar and buttons)*/
   text-align: center;
+  /*Changing how large the text it.*/
   font-weight: 200;
 }
 
 header {
+  /*A border for the List*/
   border: 2px solid black;
 }
 
 ul {
+  /*Align the list to the left*/
   text-align: left;
+  /*Put the bullets inside*/
   list-style-position: inside;
 }
 
 #switch {
+  /*The Dark Mode button*/
+  /*Adding a space on the bottom*/
   margin-bottom: 2.5px;
+  /*Making the button wider*/
   width: 90%;
+  /*Adding a different space on the bottom*/
   padding-bottom: 2.5px;
+  /*Button is fixed in its spot*/
   position: fixed;
-  background-color: black;
-  color: white;
-}
-
-#create:hover {
-  color: green;
-}
-
-#clear:hover {
-  color: red;
-}
-
-#save:hover {
-  color: blue;
-}
-
-#switch:hover {
-  background-color: white;
+  /*Making the button antiquewhite*/
+  background-color: antiquewhite;
+  /*Making the button's text black*/
   color: black;
 }
 
-.darkmode {
+/*hover effects of the add item button*/
+#create:hover {
+  /*Makes the text green on hover*/
+  color: green;
+}
+
+/*hover effects of the clear list button*/
+#clear:hover {
+  /*Makes the text red on hover*/
+  color: red;
+}
+
+/*hover effects of the save list button*/
+#save:hover {
+  /*Makes the text blue on hover*/
+  color: blue;
+}
+
+/*hover effects of the dark mode button*/
+#switch:hover {
+  /*Makes the button color black on hover.*/
   background-color: black;
+  /*Makes the text color white on hover.*/
+  color: white;
+}
+
+/*Dark mode effects*/
+.darkmode {
+  /*Makes the background color black*/
+  background-color: black;
+  /*Makes the text color antiquewhite*/
   color: antiquewhite;
 }
 
+#switch.darkmode {
+  background-color: black;
+  color: antiquewhite;
+}
+#switch.darkmode:hover {
+  background-color: white;
+  color: black;
+}
+/*effects on header in dark mode*/
 header.darkmode-header {
+  /*Making the border antiquewhite*/
   border: 2px solid antiquewhite;
 }
 
+/*Text box effects*/
 #itemInput {
+  /*Changing how wide*/
   width: 80%;
+  /*Changing how wide the border is*/
   border-width: 1.5px;
+  /*Making a space between it and the shopping list*/
   margin-top: 10px;
 }
 
+/*The list effects*/
 #itemList {
+  /*Changing how wide the list is*/
   width: 80%;
   margin: 0 auto;
 }

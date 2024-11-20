@@ -1,29 +1,48 @@
+<!--Explaining my HTML code for my Shopping List Website-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Link css-->
     <link rel="stylesheet" href="style.css" />
+    <!--Website Title-->
     <title>My Shopping List</title>
   </head>
   <body>
+    <!--Dark Mode Button
+    On click, it does the darkMode function-->
     <button onclick="darkMode()" id="switch">Dark Mode</button>
+    <!--break tags to separate my button-->
     <br />
     <br />
+    <!--Separate my list from the other content.-->
     <header>
+      <!--Header-->
       <h1>My Shopping List</h1>
+      <!--My div used for JavaScript-->
       <div id="list">
+        <!--My div that holds my list items.-->
         <div id="itemList"></div>
       </div>
     </header>
+    <!--Other section of my content.-->
     <section>
+      <!--Adding a user input tag.
+      The type is text to make a text bar.
+      The placeholder is gray text to give instructions (Disappears after something is typed)-->
       <input type="text" id="itemInput" placeholder="Enter an item:" />
+      <!--A div to hold my three buttons-->
       <div id="buttons">
+        <!--The Add Item button that does the createItem function on click.-->
         <button onclick="createItem()" id="create">Add Item</button>
+        <!--The Clear List button that does the deleteItem function on click.-->
         <button onclick="deleteItems()" id="clear">Clear List</button>
+        <!--The Save List button that does the saveData function on click.-->
         <button onclick="saveData()" id="save">Save List</button>
       </div>
     </section>
+    <!--Link JavaScript-->
     <script src="main.js"></script>
   </body>
 </html>
