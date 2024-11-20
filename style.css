@@ -36,8 +36,6 @@ ul {
   /*The Dark Mode button*/
   /*Adding a space on the bottom*/
   margin-bottom: 2.5px;
-  /*Making the button wider*/
-  width: 90%;
   /*Adding a different space on the bottom*/
   padding-bottom: 2.5px;
   /*Button is fixed in its spot*/
@@ -46,6 +44,7 @@ ul {
   background-color: antiquewhite;
   /*Making the button's text black*/
   color: black;
+  width: 90%;
 }
 
 /*hover effects of the add item button*/
